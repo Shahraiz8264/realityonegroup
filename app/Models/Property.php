@@ -22,12 +22,9 @@ class Property extends BaseModel
         'address' =>  'required',
         'description' => 'required',
         'address' => 'required',
-        'developer' => 'required|exists:developers,id',
-        'type' => 'required|exists:property_types,id',
-        'category' => 'required',
+        'country' => 'required',
         'city' => 'required',
-        'price' => 'required|numeric',
-        'area'  => 'required|numeric',
+       
     ];
 
     public static function boot()
@@ -86,7 +83,7 @@ class Property extends BaseModel
 
         $condition = [];
         $result = [];
-        $this->setSelectedColumn(['properties.id','properties.name','properties.slug','address','area','price','city','developer','type','properties.is_active','category','properties.created_at','developers.name as Developer','property_types.name as PropertyType']);
+        $this->setSelectedColumn(['properties.id','properties.name','properties.slug','address','city','properties.is_active','properties.created_at','country']);
 
         $this->setRenderColumn([
             [
@@ -119,28 +116,7 @@ class Property extends BaseModel
                 'html' => false,
             ],
             [
-                'name' => 'area',
-                'type' => 'string',
-                'html' => false,
-            ],
-            [
-                'name' => 'price',
-                'type' => 'string',
-                'html' => false,
-            ],
-            [
-                'name' => 'Developer',
-                'type' => 'string',
-                'html' => false,
-            ],
-            [
-                'name' => 'PropertyType',
-                'type' => 'string',
-                'html' => false,
-
-            ],
-            [
-                'name' => 'category',
+                'name' => 'country',
                 'type' => 'string',
                 'html' => false,
             ],

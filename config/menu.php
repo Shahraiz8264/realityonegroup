@@ -27,24 +27,6 @@ return [
                         'submenu' => [],
                         
                     ],
-                    [
-                        'name' => 'developers',
-                        'route' => 'developers.index',
-                        'main_route' => 'properties',
-                        'icon' => 'nav-icon fas fa-user',
-                        'has_submenu' => false,
-                        'submenu_icon' => '',
-                        'submenu' => [],
-                    ],
-                    [
-                        'name' => 'property_types',
-                        'route' => 'property-types.index',
-                        'main_route' => 'properties',
-                        'icon' => 'nav-icon fa fa-home',
-                        'has_submenu' => false,
-                        'submenu_icon' => '',
-                        'submenu' => [],
-                    ]
                 ],
             ],
             // [
@@ -79,24 +61,6 @@ return [
             //             'submenu' => [],
             //         ],
             //]
-            [
-                'name' => 'blogs',
-                'route' => 'blogs.index',
-                'icon' => 'nav-icon fa fa-file',
-                'has_submenu' => false,
-                'submenu_icon' => '',
-                'submenu' => [],
-            ],
-            //     ],
-            // ]
-            [
-                'name' => 'queries',
-                'route' => 'queries.index',
-                'icon' => 'nav-icon fas fa-tachometer-alt',
-                'has_submenu' => false,
-                'submenu_icon' => '',
-                'submenu' => [],
-            ]
         ],
     ],
     

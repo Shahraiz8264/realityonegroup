@@ -58,15 +58,9 @@ export default {
                 name:'',
                 slug:'',
                 description:'',
-                price:'',
-                developer:'',
                 address:'',
-                area:'',
                 city:'',
-                type:'',
-                category:'',
-                lognitude:'',
-                latitude:'',
+                country:'',
                 media:[],
                 gallery:[]
             },
@@ -112,114 +106,28 @@ export default {
                     },
                     required:true,
                 },
-                {
-                    label:Language.price,
-                    field:"price",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    placeholder:function(){
-                        return "Enter "+this.label
-                    },
-                    required:true,
-                },
-                {
-                    label:Language.area,
-                    field:"area",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    placeholder:function(){
-                        return "Enter "+this.label
-                    },
-                    required:true,
-                },
-                {
-                    label:Language.developer,
-                    field:"developer",
-                    class:"vue-select1",
-                    grid:"col-md-6 col-12",
-                    type:"select",
-                    isdynamic:true,
-                    searchable:true,
-                    options:function(){
-                            if(this.isdynamic){
-                                return ref.developerOptions;            
-                            }
-                            return [
-                                {
-                                    text:'Residential',
-                                    id:'Residential'
-                                },
-                                {
-                                    text:'Commercial',
-                                    id:'Commercial'
-                                }
-                            ];
-                    },
-                    placeholder:function(){
-                        return "Select "+this.label
-                    },
-                },
+             
                 {
                     label:Language.city,
                     field:"city",
-                    class:"vue-select1",
+                    class:"form-control",
                     grid:"col-md-6 col-12",
-                    type:"select",
-                    isdynamic:false,
-                    searchable:true,
-                    options:function(){
-                            if(this.isdynamic){
-                                return ref.citiesOptions;            
-                            }
-                            return [
-                            
-                                {
-                                    text:'Islamabad',
-                                    id:'Islamabad'
-                                },
-                                {
-                                    text:'Rawalpindi',
-                                    id:'Rawalpindi'
-                                },
-                                {
-                                    text:'Gujjar Khan',
-                                    id:'Gujjar Khan'
-                                },
-                                {
-                                    text:'Mardan',
-                                    id:'Mardan'
-                                },
-                                {
-                                    text:'Peshawar',
-                                    id:'Peshawar'
-                                },
-                                {
-                                    text:'Quetta',
-                                    id:'Quetta'
-                                },
-                                {
-                                    text:'Karachi',
-                                    id:'Karachi'
-                                },
-                                {
-                                    text:'Multan',
-                                    id:'Multan'
-                                },
-                                {
-                                    text:'Sialkot',
-                                    id:'Sialkot'
-                                },
-                                {
-                                    text:'Lahore',
-                                    id:'Lahore'
-                                },
-                            ]
-                    },
+                    type:"text",
                     placeholder:function(){
-                        return "Select "+this.label
+                        return "Enter "+this.label
                     },
+                    required:true,
+                },
+                {
+                    label:Language.country,
+                    field:"country",
+                    class:"form-control",
+                    grid:"col-md-6 col-12",
+                    type:"text",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
                 },
                 {
                     label:Language.address,
@@ -232,64 +140,7 @@ export default {
                     },
                     required:true,
                 },
-                {
-                    label:Language.type,
-                    field:"type",
-                    class:"vue-select1",
-                    grid:"col-md-6 col-12",
-                    type:"select",
-                    isdynamic:true,
-                    searchable:true,
-                    options:function(){
-                            if(this.isdynamic){
-                                return ref.typesOptions;            
-                            }
-                            return [
-                                {
-                                    text:'Residential',
-                                    id:'Residential'
-                                },
-                                {
-                                    text:'Commercial',
-                                    id:'Commercial'
-                                }
-                            ];
-                    },
-                    placeholder:function(){
-                        return "Select "+this.label
-                    },
-                    
-                    required:true,
-                },
-                {
-                    label:Language.category,
-                    field:"category",
-                    class:"vue-select1",
-                    grid:"col-md-6 col-12",
-                    type:"select",
-                    isdynamic:false,
-                    searchable:true,
-                    options:function(){
-                            if(this.isdynamic){
-                                return ref.options;            
-                            }
-                            return [
-                                {
-                                    text:'Buy',
-                                    id:'Buy'
-                                },
-                                {
-                                    text:'Rent',
-                                    id:'Rent'
-                                }
-                            ];
-                    },
-                    placeholder:function(){
-                        return "Select "+this.label
-                    },
-                    
-                    required:true,
-                },
+
                 {
                     label:Language.gallery,
                     field:"gallery",
